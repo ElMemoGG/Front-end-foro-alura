@@ -1,0 +1,161 @@
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "title title title title title title"
+    "search search search search search search"
+    "topic topic topic topic topic topic"
+    "page page page page page page"
+    "loading loading loading loading loading loading";
+    
+}
+
+
+.topic-container .title{
+    grid-area: title;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.search{
+    grid-area: search;
+}
+
+.filter{
+    grid-area: filter;
+}
+.loading{
+    grid-area: loading;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 100vw;
+
+}
+
+
+.topics-container{
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+    grid-area: topic;
+}
+
+    .box-topic{
+        width: calc(100%- 32px);
+        background-color:  #353535;
+        border-radius: 4px;
+        /* padding: 16px; */
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        
+    }
+
+    .box-topic p{
+        border-radius: 4px 0 0 4px;
+        width: 10px;
+    }
+    .box-topic h3{
+        margin: 16px 16px;  
+        color: #fff;
+        font-size: 18px;
+    }
+
+.page{
+    grid-area: page;
+    margin-bottom: 32px;
+}
+
+
+/* paginacion css */
+
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+.pagination .page-link{
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+}
+.pagination .page-link:hover{
+    background-color: rgb(0, 174, 255);
+}
+
+.pagination .active .page-link{
+    background-color: rgb(0, 174, 255);
+}
+
+.pagination .disabled .page-link{
+    background-color: #353535;
+}
+.hidden-paginate{
+    display: none;
+}
+
+.box-add-topic  .form-add-topic{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+
+}
+
+.box-add-topic label{
+    display: block;
+    font-size: 18px;
+}
+
+
+
+
+.box-add-topic textarea, select, input  {
+    width: calc(100% - 17px);
+    padding: 1px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid white;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 8px;
+}
+
+
+
+.box-add-topic select option  {
+    background-color: #353535;
+    color: #fff;
+}
+
+
+.box-add-topic button {
+    display: block;
+    width: 100px;
+    margin: 8px 0 0 0;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #009eb9;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 0 8px;
+    left: 0px;
+    align-self: flex-end;
+}
+
+.box-add-topic button:disabled{
+    background-color: #727272; 
+}
+
